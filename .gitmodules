@@ -1,0 +1,14 @@
+[submodule "spa"]
+	path = spa
+	url = https://gitlab.com/simple-plugin-api/spa.git
+[submodule "mruby-zest-build"]
+	path = mruby-zest-build
+	url = https://github.com/mruby-zest/mruby-zest-build
+[submodule "zynaddsubfx"]
+	path = zynaddsubfx
+	url = https://github.com/zynaddsubfx/zynaddsubfx
+	branch = osc-plugin
+[submodule "lmms"]
+	path = lmms
+	url = https://github.com/JohannesLorenz/lmms
+	branch = osc-plugin
