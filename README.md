@@ -8,6 +8,7 @@ using a new plugin technique. It's not official.
 ## What does work, what doesn't?
 
 What should work:
+
 - drag-drop instruments over songs
 - drag-drop xmz files over songs
 - play zyn from LMMS
@@ -15,6 +16,7 @@ What should work:
 - drag-drop zyn widgets
 
 What still needs to be done:
+
 - make removing connections more easy
 - use LMMS controllers for zyn widgets
 - loading/saving has a waiting time of 1 second
@@ -110,3 +112,12 @@ Please keep the order as below
   * At that stage, LMMS should be startable, and on the plugins menu you
     should see a zyn plugin with the new zest logo
 
+## Reporting issues
+
+* Issues from LMMS, zyn and fusion can go to the issue tracker of this project,
+  if they are plugin related.
+* Issues considering the spa library itself (e.g. design issues) should go
+  preferably to the
+  [spa issue tracker](https://gitlab.com/simple-plugin-api/spa/issues)
+  or to the
+  [spa mirror's issue tracker](https://github.com/JohannesLorenz/spa/issues)
