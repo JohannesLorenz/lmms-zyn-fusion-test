@@ -103,7 +103,7 @@ run_func()
 	local install_dir=$PWD/lmms/$installdir
 	local bin_lmms="\$install_dir/bin/lmms"
 	[ -x "\$bin_lmms" ] || die "Missing LMMS executable \$bin_lmms"
-	LMMS_PLUGIN_DIR="$zyn_plugin_dir" \$run_tool \$bin_lmms "\$@"
+	LMMS_PLUGIN_DIR="$zyn_plugin_dir" \$bin_lmms "\$@"
 }
 
 run_func "\$@"
@@ -131,11 +131,12 @@ run()
 		echo "Parameters:"
 		echo "  gcc|clang     - Compiler to use"
 		echo "  <make-jobs>   - Number of jobs for compiling"
-		echo "  shallow-depth - Only if you don't want to clone full"
+		echo "  shallow-depth - Experienced git users only!"
+		echo "                  Use if you don't want to clone full"
 		echo "                  submodules. Should be >=100."
 		echo "Examples:"
-		echo "  $0 gcc 4"
-		echo "  $0 clang 1 100"
+		echo "  $0 gcc 4        # recommended"
+		echo "  $0 clang 1 100  # depth 100 not recommended"
 	else
 		local comp=$1
 		local jobs=$2

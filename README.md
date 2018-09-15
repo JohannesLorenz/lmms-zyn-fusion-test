@@ -25,6 +25,13 @@ What still needs to be done:
   * the LMMS implementation
   * the zyn implementation
 
+## Requirements
+
+* Linux or similar (installer only)
+* C++11 compiler
+* usual zyn-fusion/lmms requirements
+* at least 1.5 GB of disk space
+
 ## Precautions
 
 * As with every experimental audio projects, start with low volume to avoid
@@ -101,14 +108,13 @@ Please keep the order as below
   * At that stage, starting zyn (./src/zynaddsfubx from the build dir)
     should already work and start up zyn-fusion.
   * Write down the path of the newly built spa plugin, which is usually
-    `src/Output/libzynaddsubfx_spa.so`
+    ending on `src/Output/libzynaddsubfx_spa.so`
 - LMMS
   * Do a build like in the README, but prepend
     `PKG_CONFIG_PATH=$PKG_CONFIG_PATH:<spa pkg config directory, see above>`
     to the cmake command. An install *should* not be required.
-  * Start LMMS, go to `Edit->Settings` and remember the working directory
-  * Make a symlink from that working directory to zyn's spa library, e.g.
-    `ln -s <spa library, see above> <working-directory>/zynaddsfubx-spa.so`
+  * To start LMMS, prepend `LMMS_PLUGIN_DIR=<path to where zyn's spa lib is>`
+    before the lmms binary.
   * At that stage, LMMS should be startable, and on the plugins menu you
     should see a zyn plugin with the new zest logo
 
