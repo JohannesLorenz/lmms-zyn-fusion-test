@@ -38,6 +38,7 @@ do_build()
 
 	local builddir="build-$comp"
 	local installdir="install-$comp"
+	local m_basedir=$PWD
 
 	pushd spa
 	try_mkdir $builddir
@@ -67,7 +68,7 @@ do_build()
 		-DCMAKE_CXX_COMPILER=$cppexe \
 		-DCMAKE_BUILD_TYPE=Release \
 		-DGuiModule=zest \
-		-DZynFusionDir=../../mruby-zest-build/package \
+		-DZynFusionDir=$m_basedir/mruby-zest-build/package \
 		..
 	make -j $jobs
 	popd
