@@ -9,6 +9,6 @@
 	url = https://github.com/zynaddsubfx/zynaddsubfx
 	branch = osc-plugin
 [submodule "lmms"]
-	path = lmms
+	path = new-lmms
 	url = https://github.com/JohannesLorenz/lmms
 	branch = osc-plugin

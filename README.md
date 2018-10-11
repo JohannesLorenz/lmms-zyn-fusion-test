@@ -13,7 +13,9 @@ What should work:
 - load and save files
 - drag-drop the zyn instrument on tracks from old zyn to convert them
 - drag-drop xmz files over songs
-- drag-drop zyn widgets on automation patterns
+- drag-drop zyn widgets on automation patterns (you must
+  **keep the F1 key pressed**, in contrast to LMMS, where it's the control
+  key)
 - exporting songs
 
 What still needs to be done:
@@ -31,6 +33,7 @@ What still needs to be done:
 * Linux or similar (installer only)
 * C++11 compiler
 * usual zyn-fusion/lmms requirements
+* a stable internet connection
 * at least 1.5 GB of disk space
 
 ## Precautions
@@ -58,8 +61,12 @@ Starting in this (the README's) directory, do
 ./lmms
 ```
 
-If build.sh fails, you can fix it in the script and re-run the script. Please
-make a PR if you have fixed something.
+**Note**: During the download, there is usually no progress displayed.
+Submodules like LMMS or CALF can take 10 minutes even with a good connection.
+Please be patient. 
+
+If build.sh fails, you can fix it in the script and usually re-run the script.
+Please make a PR if you have fixed something.
 
 ### Install by re-using your current git-worktrees
 

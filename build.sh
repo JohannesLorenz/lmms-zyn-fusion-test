@@ -31,11 +31,6 @@ do_build()
     
 	[[ $jobs =~ ^[0-9]+$ ]] || die "Number of jobs must be numeric"
 	
-	local lmmsrc="$HOME/.lmmsrc.xml"
-	[ -f "$lmmsrc" ] || die "Could not find LMMS RC file \"$lmmsrc\""
-	local lmms_workdir=$(sed -n 's/^.*workingdir=\"\([^"]\+\)\".*$/\1/p' "$lmmsrc")
-	[ -d "$lmms_workdir" ] || die "Could not find LMMS working dir in $lmmsrc"
-
 	local builddir="build-$comp"
 	local installdir="install-$comp"
 	local m_basedir=$PWD
@@ -78,7 +73,7 @@ do_build()
 	popd
 
 
-	pushd lmms
+	pushd new-lmms
 	try_mkdir $builddir
 	pushd $builddir
 	[ -r CMakeCache.txt ] ||
@@ -101,7 +96,7 @@ die() {
 }
 run_func()
 {
-	local install_dir=$PWD/lmms/$installdir
+	local install_dir=$PWD/new-lmms/$installdir
 	local bin_lmms="\$install_dir/bin/lmms"
 	[ -x "\$bin_lmms" ] || die "Missing LMMS executable \$bin_lmms"
 	LMMS_PLUGIN_DIR="$zyn_plugin_dir" \$bin_lmms "\$@"
