@@ -9,17 +9,18 @@ using a new plugin technique. It's not official.
 
 What should work:
 
-- drag-drop instruments over songs
+- play previews
+- load and save files
+- drag-drop the zyn instrument on tracks from old zyn to convert them
 - drag-drop xmz files over songs
-- play zyn from LMMS
-- open/use the UI
-- drag-drop zyn widgets
+- drag-drop zyn widgets on automation patterns
+- exporting songs
 
 What still needs to be done:
 
+- LMMS can crash if project loading time takes more than 10 seconds
 - make removing connections more easy
-- use LMMS controllers for zyn widgets
-- loading/saving has a waiting time of 1 second
+- connect zyn widgets to LMMS controllers (not only automation patterns)
 - reviews for
   * the spa concept in general
   * the LMMS implementation
@@ -54,7 +55,7 @@ Starting in this (the README's) directory, do
 
 ```sh
 ./build.sh
-./run
+./lmms
 ```
 
 If build.sh fails, you can fix it in the script and re-run the script. Please
@@ -93,8 +94,8 @@ Please keep the order as below
 - spa
   * Follow README instructions for a normal install
   * Write down the PKG config file's directory for later. It's found in your
-    install folder, subdirectories lib64/pkgconfig or lib/pkgconfig. The file
-    contains a `spa.c` file.
+    install folder, subdirectories `lib64/pkgconfig` or `lib/pkgconfig`. The
+    file contains a `spa.c` file.
     Example: `~/cprogs/spa/install/lib64/pkgconfig`
 - mruby-zest-build
   * Compile like in the README
@@ -112,7 +113,7 @@ Please keep the order as below
 - LMMS
   * Do a build like in the README, but prepend
     `PKG_CONFIG_PATH=$PKG_CONFIG_PATH:<spa pkg config directory, see above>`
-    to the cmake command. An install *should* not be required.
+    to the cmake command. An install should not be required.
   * To start LMMS, prepend `LMMS_PLUGIN_DIR=<path to where zyn's spa lib is>`
     before the lmms binary.
   * At that stage, LMMS should be startable, and on the plugins menu you
@@ -126,4 +127,4 @@ Please keep the order as below
   preferably to the
   [spa issue tracker](https://gitlab.com/simple-plugin-api/spa/issues)
   or to the
-  [spa mirror's issue tracker](https://github.com/JohannesLorenz/spa/issues)
+  [spa mirror's issue tracker](https://github.com/JohannesLorenz/spa/issues).

@@ -93,7 +93,7 @@ do_build()
 	popd
 	popd
 
-	cat >run <<EOF
+	cat >lmms <<EOF
 #!/bin/bash
 
 die() {
@@ -110,7 +110,7 @@ run_func()
 run_func "\$@"
 
 EOF
-	chmod +x run
+	chmod +x lmms
 }
 
 do_git()
@@ -147,7 +147,7 @@ run()
 
 		echo
 		echo "Finished"
-		echo "Start LMMS using './run'"
+		echo "Start LMMS using './lmms' in this folder"
 	fi
 }
 
