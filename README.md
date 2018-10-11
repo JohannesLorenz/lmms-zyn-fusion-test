@@ -9,14 +9,14 @@ using a new plugin technique. It's not official.
 
 What should work:
 
-- play previews
 - load and save files
+- preview XMZ files from 'My Presets' (left sidebar in LMMS)
+- drag-drop XMZ files from 'My Presets' over songs
 - drag-drop the zyn instrument on tracks from old zyn to convert them
-- drag-drop xmz files over songs
 - drag-drop zyn widgets on automation patterns (you must
   **keep the F1 key pressed**, in contrast to LMMS, where it's the control
   key)
-- exporting songs
+- exporting songs, e.g. to WAV
 
 What still needs to be done:
 
