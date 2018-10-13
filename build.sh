@@ -129,7 +129,7 @@ run()
 		echo "  <make-jobs>   - Number of jobs for compiling"
 		echo "  shallow-depth - Experienced git users only!"
 		echo "                  Use if you don't want to clone full"
-		echo "                  submodules. Should be >=100."
+		echo "                  submodules. Should be >100."
 		echo "Examples:"
 		echo "  $0 gcc 4        # recommended"
 		echo "  $0 clang 1 100  # depth 100 not recommended"
