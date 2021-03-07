@@ -48,8 +48,6 @@ do_build()
 	popd
 	
 	pushd mruby-zest-build
-	CC=$cexe make setup
-	CC=$cexe make builddep
 	CC=$cexe make -j $jobs
 	CC=$cexe make pack
 	popd
@@ -99,7 +97,7 @@ run_func()
 	local install_dir=$PWD/new-lmms/$installdir
 	local bin_lmms="\$install_dir/bin/lmms"
 	[ -x "\$bin_lmms" ] || die "Missing LMMS executable \$bin_lmms"
-	LMMS_PLUGIN_DIR="$zyn_plugin_dir" \$bin_lmms "\$@"
+	SPA_PATH="$zyn_plugin_dir" \$bin_lmms "\$@"
 }
 
 run_func "\$@"

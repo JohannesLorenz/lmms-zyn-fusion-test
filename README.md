@@ -1,5 +1,7 @@
 # LMMS-zyn-fusion test
 
+*See the [CHANGELOG](CHANGELOG.md) for current changes*
+
 ## What's this?
 
 This is a test repository for testing LMMS together with the new zyn-fusion,
@@ -111,7 +113,7 @@ Please keep the order as below
 * zynaddsubfx
   - Do a build like in the README, but prepend
     `PKG_CONFIG_PATH=$PKG_CONFIG_PATH:<spa pkg config directory, see above>`
-    to the cmake command and add the following cmake variables:
+    to the `cmake` command and add the following CMake variables:
     - `-DZynFusionDir=<path to where fusion is>/package`
     - `-DGuiModule=zest`
   - At that stage, starting zyn (./src/zynaddsfubx from the build dir)
@@ -121,8 +123,8 @@ Please keep the order as below
 * LMMS
   - Do a build like in the README, but prepend
     `PKG_CONFIG_PATH=$PKG_CONFIG_PATH:<spa pkg config directory, see above>`
-    to the cmake command. An install should not be required.
-  - To start LMMS, prepend `LMMS_PLUGIN_DIR=<path to where zyn's spa lib is>`
+    to the `cmake` command. An install should not be required.
+  - To start LMMS, prepend `SPA_PATH=<path to where zyn's spa lib is>`
     before the lmms binary.
   - At that stage, LMMS should be startable, and on the plugins menu you
     should see a zyn plugin with the new zest logo
